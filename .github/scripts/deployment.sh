@@ -1,6 +1,5 @@
-countFile=0
-arr=($files)
-sliced=${arr[@]:1}
-echo $sliced
+# Use readarray para ler a string em um array
+readarray -t array <<< "$files"
 
-echo $countFile
+# Imprima o array
+printf '%s\n' "${array[@]}"
