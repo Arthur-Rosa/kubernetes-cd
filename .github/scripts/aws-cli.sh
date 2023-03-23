@@ -9,4 +9,3 @@ which aws
 ls -l /usr/local/bin/aws
 aws --version
 echo 'finalizado'
-done
