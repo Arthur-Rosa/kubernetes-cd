@@ -1,5 +1,5 @@
 echo 'deu certo sua ideia ?'
 
-echo 'Oi {ARTHUR} apenas um teste'
+echo 'Oi ${nome} apenas um teste'
 
 ls
