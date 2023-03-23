@@ -10,5 +10,6 @@ array=($files)
 # Restaure o IFS
 IFS=$OLDIFS
 
-# Imprima o array
-printf '%s\n' "${array[@]}"
+for f in array; do
+    echo f
+done
