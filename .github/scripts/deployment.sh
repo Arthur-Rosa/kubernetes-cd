@@ -10,6 +10,7 @@ array=($files)
 # Restaure o IFS
 IFS=$OLDIFS
 
-for f in array; do
+for f in "${array[@]}" 
+do
     echo $f
 done
