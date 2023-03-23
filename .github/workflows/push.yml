@@ -10,7 +10,7 @@ jobs:
 
 
     - name: Run build script
-      run: deployment.sh
+      run: ./.github/scripts/deployment.sh
       shell: bash
       env:
         nome: ARTHUR
