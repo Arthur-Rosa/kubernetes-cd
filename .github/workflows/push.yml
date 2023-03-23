@@ -11,8 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v35
+    # Example 1
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+        
+      # To compare changes between the current commit and the last pushed remote commit set `since_last_remote_commit: true`. e.g
+      # with:
+      #   since_last_remote_commit: true 
 
+    - name: List all changed files
+      run: |
+        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          echo "$file was changed"
+         done
+         
     - name: Run build script
       run: ./.github/scripts/deployment.sh
       shell: bash
