@@ -1,10 +1,14 @@
-if [ -a "$files" ]; then
-    echo "é um array suave"
-else
-    echo "não é um array, deu ruim"
-fi
+# Salve o IFS atual
+OLDIFS=$IFS
 
-# Use readarray para ler a string em um array
-readarray -t array <<< "$files"
+# Defina o IFS como espaço
+IFS=' '
+
+# Converta a string em um array
+array=($files)
+
+# Restaure o IFS
+IFS=$OLDIFS
+
 # Imprima o array
 printf '%s\n' "${array[@]}"
