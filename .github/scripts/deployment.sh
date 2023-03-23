@@ -13,5 +13,6 @@ IFS=$OLDIFS
 for f in "${array[@]}" 
 do
     path="./$f"
-    cat $path
+
+    
 done

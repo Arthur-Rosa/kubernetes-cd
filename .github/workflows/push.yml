@@ -20,6 +20,9 @@ jobs:
       # To compare changes between the current commit and the last pushed remote commit set `since_last_remote_commit: true`. e.g
       # with:
       #   since_last_remote_commit: true 
+    - name: Install Aws Cli
+      run: ./.github/scripts/aws-cli.sh
+      shell: bash
     - name: Run build script
       run: ./.github/scripts/deployment.sh
       shell: bash
