@@ -33,5 +33,6 @@ jobs:
       shell: bash
 
       env:
-        teste: ${{ secrets.TEST_DE_SECRET }}
+        aws_acess: ${{ secrets.TEST_DE_SECRET }}
+        aws_secret: ${{ secrets.TEST_DE_SECRET }}
         files: ${{ steps.changed-files.outputs.all_changed_files }}
