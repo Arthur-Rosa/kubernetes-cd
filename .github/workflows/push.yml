@@ -28,11 +28,19 @@ jobs:
       run: ./.github/scripts/eksctl.sh
       shell: bash
 
+    - name: Connect to Aws
+      run: ./.github/scripts/connect.sh
+      shell: bash
+      env:
+        aws_acess: ${{ secrets.TEST_DE_SECRET }}
+        aws_secret: ${{ secrets.TEST_DE_SECRET }}
+        aws_region: "us-east-1"
+        aws_output: "json"
+
     - name: Run build script
       run: ./.github/scripts/deployment.sh
       shell: bash
 
       env:
-        aws_acess: ${{ secrets.TEST_DE_SECRET }}
-        aws_secret: ${{ secrets.TEST_DE_SECRET }}
+
         files: ${{ steps.changed-files.outputs.all_changed_files }}
