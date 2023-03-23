@@ -8,9 +8,11 @@ do
     path="./$f"
     
     aws configure
-    $aws_acess
-    $aws_secret
+
+
+    echo $aws_acess
+    echo $aws_secret
     echo "us-east-1"
     echo "json"
-    
+
 done
