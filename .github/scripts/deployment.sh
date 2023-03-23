@@ -13,6 +13,8 @@ IFS=$OLDIFS
 for f in "${array[@]}" 
 do
     path="./$f"
-
     
+    aws --version
+    eksctl version
+
 done
