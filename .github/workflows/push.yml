@@ -20,13 +20,9 @@ jobs:
       # To compare changes between the current commit and the last pushed remote commit set `since_last_remote_commit: true`. e.g
       # with:
       #   since_last_remote_commit: true 
-    - name: List all changed files
-      run: |
-        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-          echo "$file was changed"
-        done
     - name: Run build script
       run: ./.github/scripts/deployment.sh
       shell: bash
       env:
         nome: ARTHUR
+        files: ${{ steps.changed-files.outputs.all_changed_files }}

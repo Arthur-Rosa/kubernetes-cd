@@ -6,7 +6,6 @@ ls
 
 countFile=0
 
-for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-    
+for file in files; do
     echo $file
 done
