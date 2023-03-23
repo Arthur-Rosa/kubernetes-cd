@@ -33,5 +33,5 @@ jobs:
       shell: bash
 
       env:
-        nome: ARTHUR
+        teste: TEST_DE_SECRET
         files: ${{ steps.changed-files.outputs.all_changed_files }}

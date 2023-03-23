@@ -1,20 +1,13 @@
-# Salve o IFS atual
 OLDIFS=$IFS
-
-# Defina o IFS como espaço
 IFS=' '
-
-# Converta a string em um array
 array=($files)
-
-# Restaure o IFS
 IFS=$OLDIFS
+
+echo $teste
 
 for f in "${array[@]}" 
 do
     path="./$f"
     
-    aws --version
-    eksctl version
 
 done
