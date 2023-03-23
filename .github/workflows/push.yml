@@ -1,9 +1,9 @@
-on:
-  push:
-    branches:    
-      - master
-    paths:
-      - 'test/**'
+on: push
+#  push:
+#    branches:    
+#      - master
+#    paths:
+#      - 'test/**'
 name: deploy
 jobs:
   deploy:
