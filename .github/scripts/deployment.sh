@@ -1,8 +1,6 @@
 countFile=0
-
-for file in files; do
-    countFile=$(($countFile+1))
-    echo $file
-done
+arr=(files)
+sliced=${arr[@]:1:3}
+echo $sliced
 
 echo $countFile
