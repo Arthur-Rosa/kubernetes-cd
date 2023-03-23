@@ -12,5 +12,6 @@ IFS=$OLDIFS
 
 for f in "${array[@]}" 
 do
-    echo $f
+    path="./$f"
+    cat $path
 done
