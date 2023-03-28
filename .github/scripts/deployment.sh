@@ -13,10 +13,8 @@ do
 
     aws eks update-kubeconfig --name basic-cluster --region aws-region
     
-    eksctl utils write-kubeconfig --kubeconfig=./.github/config/kubeconfig.yaml --cluster=basic-cluster
-
-     eksctl register cluster --name basic-cluster --provider EKS_ANYWHERE --region eu-north-1
-
+    aws sts get-caller-identity
+    
     echo "##############################################################"
     echo "Pré criando File"
 
