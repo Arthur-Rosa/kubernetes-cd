@@ -11,10 +11,10 @@ do
     
     aws eks --region eu-north-1 update-kubeconfig --name basic-cluster
 
-    aws eks update-kubeconfig --name basic-cluster --region aws-region
+    aws eks update-kubeconfig --name basic-cluster --region eu-north-1
     
     aws sts get-caller-identity
-    
+
     echo "##############################################################"
     echo "Pré criando File"
 
