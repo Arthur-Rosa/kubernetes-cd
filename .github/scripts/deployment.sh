@@ -9,6 +9,6 @@ do
     
     aws eks --region us-east-1 update-kubeconfig --name cluster_name
 
-    echo eksctl create nodegroup --config-file=$path
+    eksctl create nodegroup --config-file=$path
 
 done
