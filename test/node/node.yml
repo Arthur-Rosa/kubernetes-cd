@@ -6,7 +6,7 @@ metadata:
   region: us-east-1
       
 managedNodeGroups:
-  - name: managed-ng-efk-001
+  - name: managed-ng-efk-00
     instanceType: t3.large
     minSize: 1
     desiredCapacity: 1
