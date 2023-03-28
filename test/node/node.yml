@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eksc-inti-hmg-001
+  name: teste-aks-pipe
   region: us-east-1
       
 managedNodeGroups:
@@ -15,16 +15,10 @@ managedNodeGroups:
     volumeSize: 32
     volumeType: gp3
     maxPodsPerNode: 110
-# forces the use of IMDSv2 tokens
-#    disableIMDSv1: true
     privateNetworking: true 
     ssh:
-      # Enable ssh access (via the admin container)
       allow: true
-      publicKeyName: eksc-inti-hmg-001
-      # new feature for restricting SSH access to certain AWS security group IDs
-#      sourceSecurityGroupIds: ["sg-0fbb146e573f4b0e4"]
-#    labels: {role: system}
+      publicKeyName: teste-aks-pipe
     labels: 
       app: efk
       owner: inti
@@ -40,8 +34,4 @@ managedNodeGroups:
         albIngress: true
         ebs: true
         efs: true
-#    preBootstrapCommands:
-      # allow docker registries to be deployed as cluster service
-      #- "$command1"
-      #- "$command2"
 
