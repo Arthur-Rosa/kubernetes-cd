@@ -34,7 +34,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.SECRET_KEY }}
-        aws-region: us-east-1
+        aws-region: eu-north-1
 
     - name: Run build script
       run: ./.github/scripts/deployment.sh

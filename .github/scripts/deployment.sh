@@ -7,7 +7,7 @@ for f in "${array[@]}"
 do
     path="./$f"
     
-    aws eks --region us-east-1 update-kubeconfig --name basic-cluster
+    aws eks --region eu-north-1 update-kubeconfig --name basic-cluster
 
     echo "##############################################################"
     echo "Pegando File"
