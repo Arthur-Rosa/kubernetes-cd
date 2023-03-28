@@ -29,7 +29,7 @@ jobs:
       shell: bash
 
     - name: Connect to Aws / Configure Credentials
-      uses: aws-actions/configure-aws-credentials@v3
+      uses: aws-actions/configure-aws-credentials@v2
       with:
         aws_acess: ${{ secrets.TEST_DE_SECRET }}
         aws_secret: ${{ secrets.TEST_DE_SECRET }}
