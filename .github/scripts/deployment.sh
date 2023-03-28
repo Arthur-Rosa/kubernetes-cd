@@ -21,6 +21,6 @@ do
     echo "##############################################################"
     echo "Iniciando criação" 
 
-    eksctl create nodegroup --config-file=$path --profile 
+    eksctl create nodegroup --config-file=$path
 
 done
