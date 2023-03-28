@@ -1,4 +1,4 @@
-apiVersion: eksctl.io/v1alpha5
+apiVersion: eksctl.io/v1
 kind: ClusterConfig
 
 metadata:
@@ -6,7 +6,7 @@ metadata:
   region: eu-north-1
 
 managedNodeGroups:
-  - name: pipeline-node-009
+  - name: pipeline-node-010
     labels: { role: workers }
     instanceType: m5.xlarge
     desiredCapacity: 10
