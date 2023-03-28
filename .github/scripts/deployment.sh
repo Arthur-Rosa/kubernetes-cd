@@ -3,6 +3,8 @@ IFS=' '
 array=($files)
 IFS=$OLDIFS
 
+cat ~/.aws/config
+
 for f in "${array[@]}" 
 do
     path="./$f"
