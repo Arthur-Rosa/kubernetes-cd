@@ -7,6 +7,8 @@ for f in "${array[@]}"
 do
     path="./$f"
     
-    aws s3 ls
+    aws eks --region us-east-1 update-kubeconfig --name cluster_name
+
+    echo eksctl create nodegroup --config-file=$path
 
 done
