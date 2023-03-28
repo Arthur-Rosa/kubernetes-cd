@@ -15,6 +15,8 @@ do
     
     eksctl utils write-kubeconfig --kubeconfig=./.github/config/kubeconfig.yaml --cluster=basic-cluster
 
+     eksctl register cluster --name basic-cluster --provider EKS_ANYWHERE --region eu-north-1
+
     echo "##############################################################"
     echo "Pré criando File"
 
