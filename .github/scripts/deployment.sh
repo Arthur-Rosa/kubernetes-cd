@@ -15,15 +15,11 @@ do
 
     eksctl utils write-kubeconfig --kubeconfig=./.github/config/kubeconfig.yaml --profile=test
     echo "##############################################################"
-    echo "Pegando File"
-
-    
-
-    echo " "
+    echo "Pré criando File"
 
     echo "##############################################################"
     echo "Iniciando criação" 
 
-    eksctl create nodegroup --config-file=$path --profile 
+    eksctl create nodegroup --config-file=$path
 
 done
