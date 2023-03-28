@@ -1,9 +1,10 @@
-on: push
-#  push:
-#    branches:    
-#      - master
-#    paths:
-#      - 'test/**'
+#on: push
+on:
+  push:
+    branches:    
+      - master
+    paths:
+      - 'test/node/**'
 name: deploy
 jobs:
   deploy:
@@ -40,5 +41,4 @@ jobs:
       shell: bash
 
       env:
-
         files: ${{ steps.changed-files.outputs.all_changed_files }}
