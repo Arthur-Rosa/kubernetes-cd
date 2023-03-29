@@ -9,10 +9,16 @@ for f in "${array[@]}"
 do
     path="./$f"
     
+    echo "##############################################################"
+    echo "Conectando File"
+
     aws eks --region eu-north-1 update-kubeconfig --name basic-cluster
 
     aws eks update-kubeconfig --name basic-cluster --region eu-north-1
     
+    echo "##############################################################"
+    echo "Arquivo caller identity"
+
     aws sts get-caller-identity
 
     echo "##############################################################"
