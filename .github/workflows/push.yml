@@ -36,15 +36,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.SECRET_KEY }}
         aws-region: eu-north-1
 
-    - name: Tentativa
-      uses: statsig-io/kubectl-via-eksctl@main
+    - name: eksctl-cmd
+      uses: robatwave/github-action-eksctl@0.1.2
       with:
-        args: rollout restart deployment/willanyoneeverreadthis
-      env:
-        aws_access_key_id: ${{ secrets.ACCESS_KEY }}
-        aws_secret_access_key: ${{ secrets.SECRET_KEY }}
-        region: eu-north-1
-        cluster: basic-cluster 
+        AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
+        aws-AWS_DEFAULT_REGION: eu-north-1      
 
     - name: Run build script
       run: ./.github/scripts/deployment.sh
