@@ -6,7 +6,7 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: pipeline-node-020
+  - name: pipeline-node-021
     labels: { role: workers }
     instanceType: m5.xlarge
     desiredCapacity: 10
