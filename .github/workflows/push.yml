@@ -4,7 +4,7 @@ on:
     branches:    
       - master
     paths:
-      - 'test/node/**'
+      - 'test/diferente/**'
 name: deploy
 jobs:
   deploy:
