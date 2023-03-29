@@ -2,8 +2,6 @@
 on:
   push:
     branches: [ master ]
-    paths:
-      - 'test/diferente/**'
 name: deploy
 jobs:
   deploy:
