@@ -5,7 +5,7 @@ on: push
 #      - master
 #    paths:
 #      - 'test/diferente/**'
-name: deploy
+name: deploy-new
 jobs:
   deploy:
     name: deploy to cluster
