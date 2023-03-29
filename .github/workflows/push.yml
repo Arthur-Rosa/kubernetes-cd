@@ -5,7 +5,7 @@ on: push
 #      - master
 #    paths:
 #      - 'test/node/**'
-name: deploy-new
+name: deploy
 jobs:
   deploy:
     name: deploy to cluster
