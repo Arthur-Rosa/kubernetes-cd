@@ -4,7 +4,7 @@ on:
     branches:    
       - master
     paths:
-      - 'test/node/**'
+      - 'test/node/managed-ng-**'
 name: deploy
 jobs:
   deploy:
@@ -29,8 +29,8 @@ jobs:
     - name: Connect to Aws / Configure Credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-        aws-secret-access-key: ${{ secrets.SECRET_KEY }}
+        aws-access-key-id: ${{ secrets.ACCESS_KEY_NODE }}
+        aws-secret-access-key: ${{ secrets.SECRET_KEY_NODE }}
         aws-region: us-east-1  
 
     - name: Run build script
