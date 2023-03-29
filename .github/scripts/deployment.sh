@@ -15,7 +15,11 @@ do
     aws eks --region eu-north-1 update-kubeconfig --name basic-cluster
 
     aws eks update-kubeconfig --name basic-cluster --region eu-north-1
-    
+
+    echo "##############################################################"
+    echo "Kubectl"
+    kubectl get nodes
+
     echo "##############################################################"
     echo "Arquivo caller identity"
 
