@@ -3,10 +3,10 @@ kind: ClusterConfig
 
 metadata:
   name: basic-cluster
-  region: eu-north-1
+  region: us-east-1
 
 nodeGroups:
   - name: ng-1
-    instanceType: m5.large
+    instanceType: c1.medium
     desiredCapacity: 10
     volumeSize: 80

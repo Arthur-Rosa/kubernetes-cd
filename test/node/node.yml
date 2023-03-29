@@ -3,10 +3,10 @@ kind: ClusterConfig
 
 metadata:
   name: basic-cluster
-  region: eu-north-1
+  region: us-east-1
 
 managedNodeGroups:
-  - name: pipeline-node-019
+  - name: pipeline-node-020
     labels: { role: workers }
     instanceType: m5.xlarge
     desiredCapacity: 10
