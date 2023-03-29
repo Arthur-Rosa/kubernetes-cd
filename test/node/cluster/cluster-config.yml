@@ -10,3 +10,4 @@ nodeGroups:
     instanceType: c1.medium
     desiredCapacity: 10
     volumeSize: 80
+
